@@ -25,7 +25,7 @@ export const createServerClient = () => {
     apiUrl: process.env.NEXT_PUBLIC_LANGGRAPH_API_URL,
     defaultHeaders: {
       'Content-Type': 'application/json',
-      'X-Api-Key': process.env.LANGCHAIN_API_KEY,
+      'X-Api-Key': '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',
     },
   });
 
