@@ -1,5 +1,6 @@
 {
     "name": "ai-pdf-chatbot-langchain",
+    "packageManager": "yarn",
     "description": "AI PDF chatbot template based on the book Learning LangChain (O'Reilly)",
     "private": true,
     "version": "0.0.1",
