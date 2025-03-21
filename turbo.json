@@ -1,16 +1,24 @@
 {
-    "$schema": "https://turbo.build/schema.json",
-    "globalDependencies": ["**/.env"],
-    "tasks": {
-      "build": {
-        "dependsOn": ["^build"],
-        "outputs": ["**/dist/**"]
-      },
-      "lint": {
-        "dependsOn": ["^lint"]
-      },
-      "format": {
-        "dependsOn": ["^format"]
-      }
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env"],
+  "globalEnv": [
+    "LANGGRAPH_RETRIEVAL_ASSISTANT_ID",
+    "LANGGRAPH_INGESTION_ASSISTANT_ID",
+    "LANGCHAIN_API_KEY",
+    "LANGCHAIN_TRACING_V2",
+    "LANGCHAIN_PROJECT"
+  ],
+
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["**/dist/**"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "format": {
+      "dependsOn": ["^format"]
     }
   }
+}
