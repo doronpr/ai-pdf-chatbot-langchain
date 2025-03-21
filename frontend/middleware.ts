@@ -9,7 +9,7 @@ export function middleware(request: NextRequest) {
 
   if (basicAuth) {
     const authValue = basicAuth.split(' ')[1];
-    const [pwd] = atob(authValue).split(':');
+    const [_, pwd] = atob(authValue).split(':');
     if (pwd === 'kbkb2025') {
       return NextResponse.next();
     }
