@@ -18,7 +18,7 @@ export const createServerClient = () => {
   }
 
   if (!process.env.LANGCHAIN_API_KEY) {
-    throw new Error('LANGCHAIN_API_KEY is not set');
+    // throw new Error('LANGCHAIN_API_KEY is not set');
   }
 
   const client = new Client({
