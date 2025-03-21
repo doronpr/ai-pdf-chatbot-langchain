@@ -206,15 +206,12 @@ export default function Home() {
     if (selectedFiles.length === 0) return;
 
     const nonPdfFiles = selectedFiles.filter(
-      (file) =>
-        file.type !== 'application/pdf' &&
-        file.type !==
-          'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+      (file) => file.type !== 'application/pdf',
     );
     if (nonPdfFiles.length > 0) {
       toast({
         title: 'Invalid file type',
-        description: 'Please upload PDF/docx files only',
+        description: 'Please upload PDF files only',
         variant: 'destructive',
       });
       return;
