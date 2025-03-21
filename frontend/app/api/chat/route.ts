@@ -102,8 +102,11 @@ export async function POST(req: Request) {
   } catch (error) {
     // Handle JSON parsing errors
     console.error('Route error:', error);
+    if (Math.random() < 0.5) {
+      throw error;
+    }
     return new NextResponse(
-      JSON.stringify({ error: 'Internal server error' }),
+      JSON.stringify({ error: `Internal server error: ${error}` }),
       {
         status: 500,
         headers: { 'Content-Type': 'application/json' },
