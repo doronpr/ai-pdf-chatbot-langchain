@@ -318,7 +318,7 @@ export default function Home() {
                 type="file"
                 ref={fileInputRef}
                 onChange={handleFileUpload}
-                accept=".pdf"
+                accept=".pdf,.docx"
                 multiple
                 className="hidden"
               />
